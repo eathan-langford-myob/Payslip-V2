@@ -1,9 +1,11 @@
+package User;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class UserTest {
-    User actual;
+    private User actual;
 
     @Before
     public void setUp() {
@@ -23,13 +25,13 @@ public class UserTest {
         Assert.assertEquals(actual.getLastName(), expected);
     }
     @Test
-    public void shouldCreateUserWithFirstName_WhenConstructed() {
+    public void shouldCreateUserWithSalary_WhenConstructed() {
         int expected = 65000;
 
         Assert.assertEquals(actual.getSalary(), expected);
     }
     @Test
-    public void shouldCreateUserWithFirstName_WhenConstructed() {
+    public void shouldCreateUserWithSuperRate_WhenConstructed() {
         int expected = 9;
 
         Assert.assertEquals(actual.getSuperRate(), expected);
