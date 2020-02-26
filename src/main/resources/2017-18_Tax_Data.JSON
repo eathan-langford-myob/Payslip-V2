@@ -24,7 +24,7 @@
   },
   {
     "lowerThreshold": 180001,
-    "upperThreshold": null,
+    "upperThreshold": 0,
     "perDollar": 45,
     "initialCharge": 54232
   }
