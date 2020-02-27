@@ -6,48 +6,58 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class PayslipTest {
-    private Payslip actual;
+    private Payslip examplePayslip;
 
     @Before
     public void setUp() {
-        actual = new Payslip("Eathan Langford", "March 1-30", 65000, 15000, 50000, 506);
+        examplePayslip = new Payslip("Eathan Langford", "March 1 - March 30", 65000, 15000, 50000, 506);
     }
 
     @Test
     public void shouldCreatePayslipWithName_WhenConstructed() {
         String expected = "Eathan Langford";
 
-        Assert.assertEquals(actual.getName(), expected);
+        Assert.assertEquals(examplePayslip.getName(), expected);
     }
 
     @Test
     public void shouldCreatePayslipWithPayPeriod_WhenConstructed() {
-        String expected = "March 1-30";
+        String expected = "March 1 - March 30";
 
-        Assert.assertEquals(actual.getPayPeriod(), expected);
+        Assert.assertEquals(examplePayslip.getPayPeriod(), expected);
     }
     @Test
     public void shouldCreatePayslipWithGrossIncome_WhenConstructed() {
         int expected = 65000;
 
-        Assert.assertEquals(actual.getGrossIncome(), expected);
+        Assert.assertEquals(examplePayslip.getGrossIncome(), expected);
     }
     @Test
     public void shouldCreatePayslipWithIncomeTax_WhenConstructed() {
         int expected = 15000;
 
-        Assert.assertEquals(actual.getIncomeTax(), expected);
+        Assert.assertEquals(examplePayslip.getIncomeTax(), expected);
     }
     @Test
     public void shouldCreatePayslipWithNetIncome_WhenConstructed() {
         int expected = 50000;
 
-        Assert.assertEquals(actual.getNetIncome(), expected);
+        Assert.assertEquals(examplePayslip.getNetIncome(), expected);
     }
     @Test
     public void shouldCreatePayslipWithSuper_WhenConstructed() {
         int expected = 506;
 
-        Assert.assertEquals(actual.getPaidSuper(), expected);
+        Assert.assertEquals(examplePayslip.getPaidSuper(), expected);
     }
+
+    @Test
+    public void shouldGenerateValidPayslip_WhenGivenUser() {
+        User newUser = new User("Eathan", "Langford", 65000, 9, "March 1", "March 30");
+
+        Payslip actual = new Payslip().generatePayslip(newUser);
+
+        Assert.assertEquals(actual, examplePayslip);
+    }
+
    }

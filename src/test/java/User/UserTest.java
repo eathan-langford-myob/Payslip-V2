@@ -9,7 +9,7 @@ public class UserTest {
 
     @Before
     public void setUp() {
-        actual = new User("Eathan", "Langford", 65000, 9);
+        actual  = new User("Eathan", "Langford", 60050, 9, "March 1", "March 30");
     }
 
     @Test
@@ -26,7 +26,7 @@ public class UserTest {
     }
     @Test
     public void shouldCreateUserWithSalary_WhenConstructed() {
-        int expected = 65000;
+        int expected = 60050;
 
         Assert.assertEquals(actual.getSalary(), expected);
     }
@@ -35,5 +35,18 @@ public class UserTest {
         int expected = 9;
 
         Assert.assertEquals(actual.getSuperRate(), expected);
+    }
+
+    @Test
+    public void shouldCreateUserWithStartDate_WhenConstructed() {
+        String expected = "March 1";
+
+        Assert.assertEquals(actual.getStartDate(), expected);
+    }
+    @Test
+    public void shouldCreateUserWithEndDate_WhenConstructed() {
+        String expected = "March 30";
+
+        Assert.assertEquals(actual.getEndDate(), expected);
     }
 }
