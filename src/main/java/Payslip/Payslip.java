@@ -27,7 +27,7 @@ public class Payslip {
 
     public Payslip generatePayslip(User user) {
         Calculations taxCalculator = new Calculations(user);
-        return new Payslip(taxCalculator.calculateName(), user.getStartDate()+" - "+user.getEndDate(), 5004, 922, 4082, 450);
+        return new Payslip(taxCalculator.calculateName(), taxCalculator.calculatePayPeriod(), 5004, 922, 4082, 450);
     }
 
     public String getName() {
@@ -75,6 +75,10 @@ public class Payslip {
 
         private String calculateName() {
             return String.format("%s %s", user.getFirstName(), user.getLastName());
+        }
+
+        private String calculatePayPeriod() {
+            return String.format("%s - %s", user.getStartDate(), user.getEndDate());
         }
 
     }
