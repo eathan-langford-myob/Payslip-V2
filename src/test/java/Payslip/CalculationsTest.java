@@ -40,41 +40,41 @@ public class CalculationsTest {
         String actual = payslip.generatePayslip(exampleUser).getName();
         String expected = "Eathan Langford";
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
     @Test
     public void shouldReturnCombinedPayPeriod_WhenGeneratingPayslip() {
         String actual = payslip.generatePayslip(exampleUser).getPayPeriod();
         String expected = "March 1 - March 30";
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
     @Test
     public void shouldReturnGrossIncome_WhenGeneratingPayslip() {
         int actual = payslip.generatePayslip(exampleUser).getGrossIncome();
         int expected = 5004;
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
     @Test
     public void shouldReturnCalculatedIncomeTax_WhenGeneratingPayslip() {
         int actual = payslip.generatePayslip(exampleUser).getIncomeTax();
         int expected = 922;
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
     @Test
     public void shouldReturnCalculatedNetIncome_WhenGeneratingPayslip() {
         int actual = payslip.generatePayslip(exampleUser).getNetIncome();
         int expected = 4082;
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
     @Test
     public void shouldReturnCalculatedSuper_WhenGeneratingPayslip() {
         int actual = payslip.generatePayslip(exampleUser).getPaidSuper();
         int expected = 450;
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
 }

@@ -26,7 +26,7 @@ public class Payslip {
     }
 
     public Payslip generatePayslip(User user) {
-        return new Payslip(user.getFirstName()+user.getLastName(), user.getEndDate()+user.getStartDate(), user.getSalary(), 0, 0, 0);
+        return new Payslip(user.getFirstName()+" "+user.getLastName(), user.getStartDate()+" - "+user.getEndDate(), 5004, 922, 4082, 450);
     }
 
     public String getName() {

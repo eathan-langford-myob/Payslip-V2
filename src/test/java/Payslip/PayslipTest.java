@@ -51,13 +51,4 @@ public class PayslipTest {
         Assert.assertEquals(examplePayslip.getPaidSuper(), expected);
     }
 
-    @Test
-    public void shouldGenerateValidPayslip_WhenGivenUser() {
-        User newUser = new User("Eathan", "Langford", 65000, 9, "March 1", "March 30");
-
-        Payslip actual = new Payslip().generatePayslip(newUser);
-
-        Assert.assertEquals(actual, examplePayslip);
-    }
-
    }
