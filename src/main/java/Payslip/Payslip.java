@@ -27,7 +27,7 @@ public class Payslip {
 
     public Payslip generatePayslip(User user) {
         Calculations taxCalculator = new Calculations(user);
-        return new Payslip(taxCalculator.calculateName(), taxCalculator.calculatePayPeriod(), 5004, 922, 4082, 450);
+        return new Payslip(taxCalculator.calculateName(), taxCalculator.calculatePayPeriod(), taxCalculator.calculateGrossIncome(), 922, 4082, 450);
     }
 
     public String getName() {
@@ -73,6 +73,11 @@ public class Payslip {
             this.user = user;
         }
 
+        //    gross income = 60,050 / 12 = 5,004.16666667 (round down) = 5,004
+//    income tax = (3,572 + (60,050 - 37,000) x 0.325) / 12 = 921.9375 (round up) = 922
+//    net income = 5,004 - 922 = 4,082
+//    super = 5,004 x 9% = 450.36 (round down) = 450
+
         private String calculateName() {
             return String.format("%s %s", user.getFirstName(), user.getLastName());
         }
@@ -81,5 +86,8 @@ public class Payslip {
             return String.format("%s - %s", user.getStartDate(), user.getEndDate());
         }
 
+        private int calculateGrossIncome() {
+            return (int) Math.floor(user.getSalary() / 12);
+        }
     }
 }
