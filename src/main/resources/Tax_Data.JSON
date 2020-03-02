@@ -4,7 +4,7 @@
   "upperThreshold": 18200,
   "perDollar": 0,
   "initialCharge": 0
-},
+  },
   {
     "lowerThreshold": 18201,
     "upperThreshold": 37000,

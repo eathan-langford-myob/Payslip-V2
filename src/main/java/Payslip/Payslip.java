@@ -33,7 +33,7 @@ public class Payslip {
 
     public Payslip generatePayslip(User user) throws IOException, ParseException {
         Calculations taxCalculator = new Calculations(user);
-        return new Payslip(taxCalculator.calculateName(), taxCalculator.calculatePayPeriod(), taxCalculator.calculateGrossIncome(), taxCalculator.calculateIncomeTax(), taxCalculator.calculateNetIncome(), 450);
+        return new Payslip(taxCalculator.calculateName(), taxCalculator.calculatePayPeriod(), taxCalculator.calculateGrossIncome(), taxCalculator.calculateIncomeTax(), taxCalculator.calculateNetIncome(), taxCalculator.calculatePaidSuper());
     }
 
     public String getName() {
@@ -81,6 +81,7 @@ public class Payslip {
         private long calculatedGrossIncome;
         private long calculatedIncomeTax;
         private long calculatedNetIncome;
+        private long calculatedSuper;
 
         public Calculations(User user) {
             this.user = user;
@@ -98,10 +99,6 @@ public class Payslip {
             }
             return taxBracket;
         }
-        //    gross income = 60,050 / 12 = 5,004.16666667 (round down) = 5,004
-//    income tax = (3,572 + (60,050 - 37,000) x 0.325) / 12 = 921.9375 (round up) = 922
-//    net income = 5,004 - 922 = 4,082
-//    super = 5,004 x 9% = 450.36 (round down) = 450
 
         private String calculateName() {
             calculatedName = String.format("%s %s", user.getFirstName(), user.getLastName());
@@ -131,6 +128,11 @@ public class Payslip {
         private long calculateNetIncome() {
             calculatedNetIncome = calculatedGrossIncome - calculatedIncomeTax;
             return calculatedNetIncome;
+        }
+
+        private long calculatePaidSuper() {
+            calculatedSuper = calculatedGrossIncome * user.getSuperRate()/100;
+            return Math.round(calculatedSuper);
         }
     }
 }
