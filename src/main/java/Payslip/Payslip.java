@@ -1,22 +1,28 @@
 package Payslip;
 
+import Data.ParserJSON;
 import User.User;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Objects;
 
 public class Payslip {
     private String name;
     private  String payPeriod;
-    private  int grossIncome;
-    private  int incomeTax;
-    private  int netIncome;
-    private  int paidSuper;
+    private  long grossIncome;
+    private  long incomeTax;
+    private  long netIncome;
+    private  long paidSuper;
 
     public Payslip() {
         this("", "", 0,0,0,0);
     }
 
-    public Payslip(String name, String payPeriod, int grossIncome, int incomeTax, int netIncome, int paidSuper) {
+    public Payslip(String name, String payPeriod, long grossIncome, long incomeTax, long netIncome, long paidSuper) {
         this.name = name;
         this.payPeriod = payPeriod;
         this.grossIncome = grossIncome;
@@ -25,9 +31,9 @@ public class Payslip {
         this.paidSuper = paidSuper;
     }
 
-    public Payslip generatePayslip(User user) {
+    public Payslip generatePayslip(User user) throws IOException, ParseException {
         Calculations taxCalculator = new Calculations(user);
-        return new Payslip(taxCalculator.calculateName(), taxCalculator.calculatePayPeriod(), taxCalculator.calculateGrossIncome(), 922, 4082, 450);
+        return new Payslip(taxCalculator.calculateName(), taxCalculator.calculatePayPeriod(), taxCalculator.calculateGrossIncome(), taxCalculator.calculateIncomeTax(), taxCalculator.calculateNetIncome(), 450);
     }
 
     public String getName() {
@@ -38,19 +44,19 @@ public class Payslip {
         return payPeriod;
     }
 
-    public int getGrossIncome() {
+    public long getGrossIncome() {
         return grossIncome;
     }
 
-    public int getIncomeTax() {
+    public long getIncomeTax() {
         return incomeTax;
     }
 
-    public int getNetIncome() {
+    public long getNetIncome() {
         return netIncome;
     }
 
-    public int getPaidSuper() {
+    public long getPaidSuper() {
         return paidSuper;
     }
 
@@ -69,25 +75,62 @@ public class Payslip {
 
     public class Calculations {
         private User user;
+        private JSONObject taxBracket;
+        private String calculatedName;
+        private String calculatedPayPeriod;
+        private long calculatedGrossIncome;
+        private long calculatedIncomeTax;
+        private long calculatedNetIncome;
+
         public Calculations(User user) {
             this.user = user;
         }
 
+        private JSONObject calculateTaxBracket() throws IOException, ParseException {
+            ParserJSON parser = new ParserJSON(System.getenv("TAX_DATA"));
+            JSONArray taxInformation = parser.getParsed();
+
+            for (Object singleTaxBracket : taxInformation) {
+                JSONObject parsedTaxBracket = (JSONObject) singleTaxBracket;
+                if (parser.isSalaryWithinTaxBracket(user.getSalary(), parsedTaxBracket)) {
+                    taxBracket = parsedTaxBracket;
+                }
+            }
+            return taxBracket;
+        }
         //    gross income = 60,050 / 12 = 5,004.16666667 (round down) = 5,004
 //    income tax = (3,572 + (60,050 - 37,000) x 0.325) / 12 = 921.9375 (round up) = 922
 //    net income = 5,004 - 922 = 4,082
 //    super = 5,004 x 9% = 450.36 (round down) = 450
 
         private String calculateName() {
-            return String.format("%s %s", user.getFirstName(), user.getLastName());
+            calculatedName = String.format("%s %s", user.getFirstName(), user.getLastName());
+            return calculatedName;
         }
 
         private String calculatePayPeriod() {
-            return String.format("%s - %s", user.getStartDate(), user.getEndDate());
+            calculatedPayPeriod = String.format("%s - %s", user.getStartDate(), user.getEndDate());
+            return calculatedPayPeriod;
         }
 
-        private int calculateGrossIncome() {
-            return (int) Math.floor(user.getSalary() / 12);
+        private long calculateGrossIncome() {
+            calculatedGrossIncome = (int) Math.floor(user.getSalary() / 12);
+            return calculatedGrossIncome;
+        }
+
+        //    income tax = (3,572 + (60,050 - 37,000) x 0.325) / 12 = 921.9375 (round up) = 922
+        private long calculateIncomeTax() throws IOException, ParseException {
+            JSONObject taxBracket = calculateTaxBracket();
+            long lowerThreshold = (((long) taxBracket.get("lowerThreshold"))-1);
+            long initialCharge = ((long) taxBracket.get("initialCharge"));
+            double taxRate = ((double) taxBracket.get("perDollar")/100);
+            calculatedIncomeTax = Math.round(((initialCharge + (user.getSalary() - lowerThreshold) * taxRate) / 12));
+            return calculatedIncomeTax;
+        }
+
+        private long calculateNetIncome() {
+            calculatedNetIncome = calculatedGrossIncome - calculatedIncomeTax;
+            return calculatedNetIncome;
         }
     }
 }

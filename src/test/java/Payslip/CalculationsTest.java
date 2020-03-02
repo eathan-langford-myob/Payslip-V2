@@ -1,18 +1,21 @@
 package Payslip;
 
 import User.User;
+import org.json.simple.parser.ParseException;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+
 public class CalculationsTest {
     private String name;
-    private  String payPeriod;
-    private  int grossIncome;
-    private  int incomeTax;
-    private  int netIncome;
-    private  int paidSuper;
+    private String payPeriod;
+    private int grossIncome;
+    private int incomeTax;
+    private int netIncome;
+    private int paidSuper;
     private User exampleUser;
     private Payslip payslip;
 
@@ -36,44 +39,49 @@ public class CalculationsTest {
     }
 
     @Test
-    public void shouldReturnCombinedFirstAndLastName_WhenGeneratingPayslip() {
+    public void shouldReturnCombinedFirstAndLastName_WhenGeneratingPayslip() throws IOException, ParseException {
         String actual = payslip.generatePayslip(exampleUser).getName();
         String expected = "Eathan Langford";
 
         Assert.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldReturnCombinedPayPeriod_WhenGeneratingPayslip() {
+    public void shouldReturnCombinedPayPeriod_WhenGeneratingPayslip() throws IOException, ParseException {
         String actual = payslip.generatePayslip(exampleUser).getPayPeriod();
         String expected = "March 1 - March 30";
 
         Assert.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldReturnGrossIncome_WhenGeneratingPayslip() {
-        int actual = payslip.generatePayslip(exampleUser).getGrossIncome();
-        int expected = 5004;
+    public void shouldReturnGrossIncome_WhenGeneratingPayslip() throws IOException, ParseException {
+        long actual = payslip.generatePayslip(exampleUser).getGrossIncome();
+        long expected = 5004;
 
         Assert.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldReturnCalculatedIncomeTax_WhenGeneratingPayslip() {
-        int actual = payslip.generatePayslip(exampleUser).getIncomeTax();
-        int expected = 922;
+    public void shouldReturnCalculatedIncomeTax_WhenGeneratingPayslip() throws IOException, ParseException {
+        long actual = payslip.generatePayslip(exampleUser).getIncomeTax();
+        long expected = 922;
 
         Assert.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldReturnCalculatedNetIncome_WhenGeneratingPayslip() {
-        int actual = payslip.generatePayslip(exampleUser).getNetIncome();
-        int expected = 4082;
+    public void shouldReturnCalculatedNetIncome_WhenGeneratingPayslip() throws IOException, ParseException {
+        long actual = payslip.generatePayslip(exampleUser).getNetIncome();
+        long expected = 4082;
 
         Assert.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldReturnCalculatedSuper_WhenGeneratingPayslip() {
-        int actual = payslip.generatePayslip(exampleUser).getPaidSuper();
-        int expected = 450;
+    public void shouldReturnCalculatedSuper_WhenGeneratingPayslip() throws IOException, ParseException {
+        long actual = payslip.generatePayslip(exampleUser).getPaidSuper();
+        long expected = 450;
 
         Assert.assertEquals(expected, actual);
     }
