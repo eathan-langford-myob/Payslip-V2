@@ -45,23 +45,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/InputValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="44" lean-forward="true" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+            <state relative-caret-position="120">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#85#86#0" expanded="true" />
+                <element signature="e#109#110#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/InputValidator.java">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Date.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+            <state relative-caret-position="216">
+              <caret line="165" column="11" selection-start-line="165" selection-start-column="11" selection-end-line="165" selection-end-column="11" />
               <folding>
-                <element signature="e#85#86#0" expanded="true" />
-                <element signature="e#109#110#0" expanded="true" />
+                <element signature="e#6467#6468#0" expanded="true" />
+                <element signature="e#6515#6516#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/InputValidatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="358">
+              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Data/ParserJSONTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
+            <state relative-caret-position="554">
               <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -122,45 +127,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/User/UserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Payslip/PayslipTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="372">
               <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/User/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="31" />
-              <folding>
-                <element signature="e#374#375#0" expanded="true" />
-                <element signature="e#406#407#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
-                <element signature="e#472#473#0" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#564#565#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#820#821#0" expanded="true" />
-                <element signature="e#852#853#0" expanded="true" />
-                <element signature="e#886#887#0" expanded="true" />
-                <element signature="e#916#917#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -200,9 +170,9 @@
         <option value="$PROJECT_DIR$/src/test/resources/OutputMessages_en_US.properties" />
         <option value="$PROJECT_DIR$/src/test/java/DetailCollectorTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Tax_Data.JSON" />
-        <option value="$PROJECT_DIR$/src/main/java/InputValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Data/ParserJSON.java" />
         <option value="$PROJECT_DIR$/src/test/java/InputValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InputValidator.java" />
       </list>
     </option>
   </component>
@@ -447,6 +417,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Payslip.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="InputValidatorTest" />
+      <option name="METHOD_NAME" value="shouldReturnTrue_WhenGivenValidDateFormat" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ParserJSONTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Payslip.test" />
       <extension name="coverage">
@@ -464,35 +444,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Payslip.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="User.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="User" />
-      <option name="MAIN_CLASS_NAME" value="User.UserTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.UserTest" />
       <item itemvalue="JUnit.All in Payslip.test" />
       <item itemvalue="JUnit.ParserJSONTest" />
       <item itemvalue="JUnit.All in Payslip.test (1)" />
       <item itemvalue="JUnit.InputValidatorTest" />
+      <item itemvalue="JUnit.InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.InputValidatorTest" />
+        <item itemvalue="JUnit.InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" />
         <item itemvalue="JUnit.All in Payslip.test" />
         <item itemvalue="JUnit.All in Payslip.test (1)" />
         <item itemvalue="JUnit.ParserJSONTest" />
-        <item itemvalue="JUnit.All in Payslip.test" />
       </list>
     </recent_temporary>
   </component>
@@ -506,44 +471,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582599840285</updated>
-      <workItem from="1582599841838" duration="45291000" />
+      <workItem from="1582599841838" duration="48487000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_Payslip_test - 2020.03.02 at 16h 27m 23s.xml">
-      <configuration name="All in Payslip.test" configurationId="JUnit" />
+    <history-entry file="InputValidatorTest_shouldReturnTrue_WhenGivenValidDateFormat - 2020.03.03 at 11h 46m 47s.xml">
+      <configuration name="InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_Payslip_test - 2020.03.02 at 16h 36m 18s.xml">
-      <configuration name="All in Payslip.test" configurationId="JUnit" />
+    <history-entry file="InputValidatorTest_shouldReturnTrue_WhenGivenValidDateFormat - 2020.03.03 at 11h 47m 02s.xml">
+      <configuration name="InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_Payslip_test - 2020.03.03 at 08h 41m 00s.xml">
-      <configuration name="All in Payslip.test" configurationId="JUnit" />
+    <history-entry file="InputValidatorTest_shouldReturnTrue_WhenGivenValidDateFormat - 2020.03.03 at 13h 28m 53s.xml">
+      <configuration name="InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_Payslip_test - 2020.03.03 at 08h 41m 06s.xml">
-      <configuration name="All in Payslip.test" configurationId="JUnit" />
+    <history-entry file="InputValidatorTest_shouldReturnTrue_WhenGivenValidDateFormat - 2020.03.03 at 13h 29m 10s.xml">
+      <configuration name="InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_Payslip_test - 2020.03.03 at 08h 41m 49s.xml">
-      <configuration name="All in Payslip.test" configurationId="JUnit" />
+    <history-entry file="InputValidatorTest_shouldReturnTrue_WhenGivenValidDateFormat - 2020.03.03 at 13h 29m 47s.xml">
+      <configuration name="InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_Payslip_test - 2020.03.03 at 08h 42m 01s.xml">
-      <configuration name="All in Payslip.test" configurationId="JUnit" />
+    <history-entry file="InputValidatorTest_shouldReturnTrue_WhenGivenValidDateFormat - 2020.03.03 at 13h 30m 24s.xml">
+      <configuration name="InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_Payslip_test - 2020.03.03 at 08h 43m 26s.xml">
-      <configuration name="All in Payslip.test" configurationId="JUnit" />
+    <history-entry file="InputValidatorTest_shouldReturnTrue_WhenGivenValidDateFormat - 2020.03.03 at 13h 31m 19s.xml">
+      <configuration name="InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_Payslip_test - 2020.03.03 at 08h 43m 30s.xml">
-      <configuration name="All in Payslip.test" configurationId="JUnit" />
+    <history-entry file="InputValidatorTest_shouldReturnTrue_WhenGivenValidDateFormat - 2020.03.03 at 13h 32m 24s.xml">
+      <configuration name="InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputValidatorTest - 2020.03.03 at 10h 47m 03s.xml">
-      <configuration name="InputValidatorTest" configurationId="JUnit" />
+    <history-entry file="InputValidatorTest_shouldReturnTrue_WhenGivenValidDateFormat - 2020.03.03 at 13h 37m 45s.xml">
+      <configuration name="InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputValidatorTest - 2020.03.03 at 10h 47m 19s.xml">
-      <configuration name="InputValidatorTest" configurationId="JUnit" />
+    <history-entry file="InputValidatorTest_shouldReturnTrue_WhenGivenValidDateFormat - 2020.03.03 at 13h 40m 35s.xml">
+      <configuration name="InputValidatorTest.shouldReturnTrue_WhenGivenValidDateFormat" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45291000" />
+    <option name="totallyTimeSpent" value="48487000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1059" y="-1057" width="1920" height="1003" extended-state="0" />
@@ -554,7 +519,7 @@
       <window_info id="Capture Tool" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Build" weight="0.32960895" />
       <window_info anchor="bottom" id="Regex" />
@@ -566,8 +531,8 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32947975" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34078214" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34078214" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -608,11 +573,22 @@
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/InputValidator.java</url>
+          <line>13</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>format.parse(startDate)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>calculatedGrossIncome * user.getSuperRate()/100</expression-string>
         <language-id>JAVA</language-id>
@@ -762,23 +738,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/InputValidator.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Date.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+        <state relative-caret-position="216">
+          <caret line="165" column="11" selection-start-line="165" selection-start-column="11" selection-end-line="165" selection-end-column="11" />
           <folding>
-            <element signature="e#85#86#0" expanded="true" />
-            <element signature="e#109#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Data/ParserJSONTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#6467#6468#0" expanded="true" />
+            <element signature="e#6515#6516#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -793,12 +759,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/InputValidatorTest.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Objects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="208">
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/time/format/DateTimeFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="1873" selection-start-line="1873" selection-end-line="1873" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Data/ParserJSONTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/InputValidatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/InputValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#85#86#0" expanded="true" />
+            <element signature="e#109#110#0" expanded="true" />
           </folding>
         </state>
       </provider>
