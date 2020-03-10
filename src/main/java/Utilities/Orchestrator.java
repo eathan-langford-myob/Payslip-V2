@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 import User.DetailParser;
+import Payslip.PayslipStringParser;
 
 public class Orchestrator {
     private final String[] questions;
@@ -74,7 +75,7 @@ public class Orchestrator {
             HashMap<String, String> validUserDetails = getValidDetails();
             User validUser = DetailParser.parseDetailsToUser(validUserDetails);
             try {
-                output.displayOutput(userPayslip.generatePayslip(validUser).print());
+                output.displayOutput(PayslipStringParser.parsePayslip(userPayslip.generatePayslip(validUser)));
                 break;
             } catch (ParseException | IOException e) {
                 output.displayOutput("Error in creating payslip. Please try again.");

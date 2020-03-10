@@ -33,7 +33,13 @@ public class Payslip {
 
     public Payslip generatePayslip(User user) throws IOException, ParseException {
         Calculations taxCalculator = new Calculations(user);
-        return new Payslip(taxCalculator.calculateName(), taxCalculator.calculatePayPeriod(), taxCalculator.calculateGrossIncome(), taxCalculator.calculateIncomeTax(), taxCalculator.calculateNetIncome(), taxCalculator.calculatePaidSuper());
+        this.name = taxCalculator.calculateName();
+        this.payPeriod = taxCalculator.calculatePayPeriod();
+        this.grossIncome = taxCalculator.calculateGrossIncome();
+        this.incomeTax = taxCalculator.calculateIncomeTax();
+        this.netIncome = taxCalculator.calculateNetIncome();
+        this.paidSuper = taxCalculator.calculatePaidSuper();
+        return this;
     }
 
     public String getName() {
@@ -126,7 +132,6 @@ public class Payslip {
             return calculatedGrossIncome;
         }
 
-        //    income tax = (3,572 + (60,050 - 37,000) x 0.325) / 12 = 921.9375 (round up) = 922
         private long calculateIncomeTax() throws IOException, ParseException {
             JSONObject taxBracket = calculateTaxBracket();
             long lowerThreshold = (((long) taxBracket.get("lowerThreshold"))-1);
