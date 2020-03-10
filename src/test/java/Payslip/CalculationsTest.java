@@ -29,7 +29,7 @@ public class CalculationsTest {
 
     @Before
     public void setUp() throws Exception {
-        exampleUser = new User("Eathan", "Langford", 60050, 9, "March 1", "March 30");
+        exampleUser = new User("Eathan", "Langford", "60050", "9", "March 1", "March 30");
         payslip = new Payslip();
     }
 

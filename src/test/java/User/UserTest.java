@@ -9,7 +9,7 @@ public class UserTest {
 
     @Before
     public void setUp() {
-        actual  = new User("Eathan", "Langford", 60050, 9, "March 1", "March 30");
+        actual  = new User("Eathan", "Langford", "60050", "9", "March 1", "March 30");
     }
 
     @Test

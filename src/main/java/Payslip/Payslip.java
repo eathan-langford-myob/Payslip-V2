@@ -73,6 +73,16 @@ public class Payslip {
                 getPayPeriod().equals(payslip.getPayPeriod());
     }
 
+    public String print() {
+        return "Payslip \n" +
+                "name :'" + name + '\'' +
+                "\n payPeriod :'" + payPeriod + '\'' +
+                "\n grossIncome :" + grossIncome +
+                "\n incomeTax :" + incomeTax +
+                "\n netIncome :" + netIncome +
+                "\n paidSuper :" + paidSuper;
+    }
+
     public class Calculations {
         private User user;
         private JSONObject taxBracket;
@@ -82,6 +92,7 @@ public class Payslip {
         private long calculatedIncomeTax;
         private long calculatedNetIncome;
         private long calculatedSuper;
+
 
         public Calculations(User user) {
             this.user = user;

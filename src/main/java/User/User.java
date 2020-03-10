@@ -8,11 +8,11 @@ public class User {
     private String startDate;
     private String endDate;
 
-    public User(String firstName, String lastName, int salary, int superRate, String startDate, String endDate) {
+    public User(String firstName, String lastName, String salary, String superRate, String startDate, String endDate) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.salary = salary;
-        this.superRate = superRate;
+        this.salary = Integer.parseInt(salary);
+        this.superRate = Integer.parseInt(superRate);
         this.startDate = startDate;
         this.endDate = endDate;
     }
