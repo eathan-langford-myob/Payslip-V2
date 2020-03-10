@@ -1,15 +1,6 @@
 import IO.IConsoleInput;
 import IO.IConsoleOutput;
-import Payslip.Payslip;
-import User.DetailParser;
-import User.User;
 import Utilities.Orchestrator;
-import org.json.simple.parser.ParseException;
-
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -21,5 +12,6 @@ public class Main {
 
     public static void main(String[] args) {
             Orchestrator orchestrator = new Orchestrator(input, output, outputMessages, questions);
+            orchestrator.run();
     }
 }
